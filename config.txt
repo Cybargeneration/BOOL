@@ -1,7 +1,0 @@
-question=What format are the hashes below in?
-answer=MD5
-hash1=25d55ad283aa400af464c76d713c07ad  # hash of "12345678"
-hash2=25f9e794323b453885f5181f1b624d0b  # hash of "123456789"
-hash3=81dc9bdb52d04dc20036dbd8313ed055  # hash of "1234"
-hash4=827ccb0eea8a706c4c34a16891f84e7b  # hash of "12345"
-
