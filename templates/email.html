@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Content</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f9fa;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+        .email-header {
+            font-weight: bold;
+        }
+        .email-body {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="email-header">
+            <p><strong>From:</strong> {{ email.from }}</p>
+            <p><strong>To:</strong> {{ email.to }}</p>
+            <p><strong>Subject:</strong> {{ email.subject }}</p>
+        </div>
+        <div class="email-body">
+            <p>{{ email.body }}</p>
+        </div>
+    </div>
+</body>
+</html>
+

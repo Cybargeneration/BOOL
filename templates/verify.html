@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crackland Challenge</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crackland Challenge</h1>
+        <p>Crack the following hashes:</p>
+        <form method="POST" action="/verify">
+            <label for="hash1">Hash 1: 5f4dcc3b5aa765d61d8327deb882cf99</label>
+            <input type="text" name="hash1" id="hash1" required>
+            
+            <label for="hash2">Hash 2: e10adc3949ba59abbe56e057f20f883e</label>
+            <input type="text" name="hash2" id="hash2" required>
+            
+            <label for="hash3">Hash 3: d8578edf8458ce06fbc5bb76a58c5ca4</label>
+            <input type="text" name="hash3" id="hash3" required>
+            
+            <label for="hash4">Hash 4: e99a18c428cb38d5f260853678922e03</label>
+            <input type="text" name="hash4" id="hash4" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
+

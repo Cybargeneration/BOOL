@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email View</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 20px;
+        }
+        .email-content {
+            text-align: left;
+            font-family: monospace;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bank Email</h2>
+        <div class="email-content">
+            <p><strong>From:</strong> {{ hash_value }}@bank.com</p>
+            <p><strong>To:</strong> bankofamerica@bank.com</p>
+            <p><strong>Subject:</strong> Important Account Information</p>
+            <p>Dear Winston Ighodaro,</p>
+            <p>We have updated your account with new security features. Please keep your password secure.</p>
+            <p>Best regards,<br>Bank Security Team</p>
+        </div>
+        <button onclick="window.location.href='/breaking_the_bank'">Back to Transfer</button>
+    </div>
+</body>
+</html>
+

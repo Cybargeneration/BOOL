@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Successful</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Transfer Successful</h2>
+        <p>The amount of ${{ amount }} has been successfully transferred to the account number {{ recipient }}.</p>
+        <p>Thank you for using our online banking service.</p>
+        <form action="/next_challenge">
+            <button type="submit">Proceed to Next Challenge</button>
+        </form>
+    </div>
+</body>
+</html>
+

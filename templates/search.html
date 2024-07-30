@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Payloads</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f9fa;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 20px;
+        }
+        ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Injection Payloads</h1>
+        <p>Here are some common SQL injection payloads that can be used for authentication bypass:</p>
+        <ul>
+            {% for payload in payloads %}
+                <li>{{ payload }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+

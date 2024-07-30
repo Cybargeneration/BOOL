@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Challenge</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/images/background1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Challenge</h1>
+        <p>Are you ready to test your skills?</p>
+        <form action="/start_crackland" method="post">
+            <button type="submit">Start CrackLand Challenge</button>
+        </form>
+    </div>
+</body>
+</html>
+

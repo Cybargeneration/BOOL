@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Email Detection</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        .email-list {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .email-item {
+            margin-bottom: 25px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Email Detection</h1>
+        <p>Select 1 for phishing and 2 for safe:</p>
+        <form method="POST">
+            <div class="email-list">
+                <div class="email-item">
+                    <label><strong>Email 1:</strong></label>
+                    <div>
+                        {% include 'emails/email1.html' %}
+                    </div>
+                    <label><input type="radio" name="email1" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email1" value="2"> 2 (Safe)</label>
+                </div>
+                <div class="email-item">
+                    <label><strong>Email 2:</strong></label>
+                    <div>
+                        {% include 'emails/email2.html' %}
+                    </div>
+                    <label><input type="radio" name="email2" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email2" value="2"> 2 (Safe)</label>
+                </div>
+                <div class="email-item">
+                    <label><strong>Email 3:</strong></label>
+                    <div>
+                        {% include 'emails/email3.html' %}
+                    </div>
+                    <label><input type="radio" name="email3" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email3" value="2"> 2 (Safe)</label>
+                </div>
+                <div class="email-item">
+                    <label><strong>Email 4:</strong></label>
+                    <div>
+                        {% include 'emails/email4.html' %}
+                    </div>
+                    <label><input type="radio" name="email4" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email4" value="2"> 2 (Safe)</label>
+                </div>
+                <div class="email-item">
+                    <label><strong>Email 5:</strong></label>
+                    <div>
+                        {% include 'emails/email5.html' %}
+                    </div>
+                    <label><input type="radio" name="email5" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email5" value="2"> 2 (Safe)</label>
+                </div>
+                <div class="email-item">
+                    <label><strong>Email 6:</strong></label>
+                    <div>
+                        {% include 'emails/email6.html' %}
+                    </div>
+                    <label><input type="radio" name="email6" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email6" value="2"> 2 (Safe)</label>
+                </div>
+                <div class="email-item">
+                    <label><strong>Email 7:</strong></label>
+                    <div>
+                        {% include 'emails/email7.html' %}
+                    </div>
+                    <label><input type="radio" name="email7" value="1"> 1 (Phishing)</label>
+                    <label><input type="radio" name="email7" value="2"> 2 (Safe)</label>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
