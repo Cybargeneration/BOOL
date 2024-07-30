@@ -1,0 +1,5 @@
+hash1=password
+hash2=123456
+hash3=qwerty
+hash4=abc123
+
